@@ -19,3 +19,8 @@ spring:
   liquibase:
     enabled: true
     drop-first: true
+
+jwt:
+  secret: ${JWT_SECRET:supersecretjwtkey}
+  expiration: 3600000
+  refresh-expiration: 604800000
