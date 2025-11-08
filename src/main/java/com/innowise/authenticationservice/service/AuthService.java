@@ -30,7 +30,7 @@ public class AuthService {
         AuthUser user = new AuthUser();
         user.setEmail(dto.getEmail());
         user.setPassword(passwordService.hash(dto.getPassword()));
-        user.setRole(dto.getRole() == null ? Role.USER : dto.getRole());
+        user.setRole(Role.USER);
         authUserRepository.save(user);
     }
 
